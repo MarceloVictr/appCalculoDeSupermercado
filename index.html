@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(imagem.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            header{
+                background-color: #030303;
+                text-align: center;
+                color:rgba(255, 255, 255, 0.877);
+                padding:40px 0;
+            }
+            header h2{
+                font-size: 40px;
+            }
+
+            .lista-cadastro{
+                display: flex;
+                margin:20px 0;
+                padding:0 20px;
+            }
+            .lista-cadastro input[type=text]{
+                flex:1;
+                height:50px;
+                padding-left: 20px;
+            }
+            .lista-produto-single{
+                padding:10px 0;
+                margin:20px 0;
+                border-bottom:1px solid rgb(0, 0, 0);
+                display: flex;
+            }
+            .lista-produto-single h3{
+                flex:1;
+                padding:0 20px;
+            }
+            h3.price-produto{
+                text-align: right;
+                font-size: 17px;
+            }
+            h3.price-produto > span{
+                background-color: #000000;
+                padding:8px 10px;
+                border-radius:20px;
+                color:white;
+            }
+            .soma-produto{
+                text-align: center;
+                background-color: black;
+                color: rgba(255, 255, 255, 0.795);
+                padding: 20px 0;
+            }
+            button{
+                padding: 7px 20px;
+                margin-top: 10px;
+                margin-left: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>App Lista de SuperMercado</h2>
+        </header>
+        <div class="lista-cadastro">
+            <input type="text" placeholder="nome do produto..."
+            name="nome_produto" />
+            <input type="number" placeholder="valor do produto..." name="price" step="0.01"
+            title="This should be a number with up to 2 decimal places.">
+
+
+            <input type="submit" name="acao" value="Cadastrar" />
+        </div>
+
+        <div class="lista-produtos">
+            
+
+        </div>
+
+        <div class="soma-produto">
+            <h1>Total: R$0</h1>
+        </div>
+
+        <button name="limpar">Limpar</button>
+
+        <script src="supermercado.js"></script>
+    </body>
+</html>
